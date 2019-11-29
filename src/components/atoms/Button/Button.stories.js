@@ -3,7 +3,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import Button from "./Button";
 import { action } from "@storybook/addon-actions";
-import { withKnobs, select, boolean } from "@storybook/addon-knobs";
+import { withKnobs, select, boolean, text } from "@storybook/addon-knobs";
 
 // You can see this as "folders" in Storybook's sidebar
 const stories = storiesOf("atoms/Button", module);
@@ -25,6 +25,6 @@ stories.add("with knobs", () => (
         // syntax is (name, default)
         disabled={boolean("disabled", false)}
     >
-        Button
+        {text("Label", "Click Me")}
     </Button>
 ));
